@@ -26,14 +26,13 @@ source:
 - {path: app_cli.c}
 tag: ['hardware:rf:band:2400|915', 'hardware:device:sdid:215']
 include:
-- path: ''
+- path: .
   file_list:
   - {path: app_init.h}
   - {path: app_process.h}
 sdk: {id: gecko_sdk, version: 4.4.3}
 toolchain_settings: []
 component:
-- {from: sidewalk, id: app_button_press}
 - {from: sidewalk, id: app_log}
 - {from: sidewalk, id: sidewalk_ble_subghz}
 - {from: sidewalk, id: sidewalk_common}
@@ -47,6 +46,7 @@ component:
 - {id: device_init_dpll}
 - {id: freertos}
 - {id: freertos_heap_4}
+- {id: gpiointerrupt}
 - {id: iostream_recommended_stream}
 - {id: iostream_retarget_stdio}
 - {id: iostream_rtt}
@@ -69,8 +69,6 @@ component:
 - {id: psa_crypto_sha512}
 - {id: psa_its}
 - {id: rail_lib_multiprotocol}
-- instance: [btn0, btn1]
-  id: simple_button
 - {id: sl_system}
 - {id: sleeptimer}
 - instance: [exp]

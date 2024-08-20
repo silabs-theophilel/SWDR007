@@ -69,6 +69,31 @@ extern "C" {
 #define SL_NRESET_PIN                            6
 #define SL_NRESET_PORT                           gpioPortA
 
+#elif defined(MURATA_MODULE)
+
+// BUSY on PA07
+// Used to indicate the status of internal state machine
+#define SL_BUSY_PIN                              3
+#define SL_BUSY_PORT                             gpioPortB
+
+//// ANT_SW on PA06
+//// External antenna switch to control antenna switch to RECEIVE or
+//// TRANSMIT.
+//#define SL_ANTSW_PIN                             6
+//#define SL_ANTSW_PORT                            gpioPortA
+
+// DIO1 on PA08
+// IRQ line from sx126x chip
+// See sx126x datasheet for IRQs list.
+#define SL_DIO_PIN                               1
+#define SL_DIO_PORT                              gpioPortB
+
+// SX NRESET on PA09
+// Factory reset pin. Will be followed by standard calibration procedure
+// and previous context will be lost.
+#define SL_NRESET_PIN                            5
+#define SL_NRESET_PORT                           gpioPortD
+
 #else
 // BUSY on PA07
 // Used to indicate the status of internal state machine
@@ -93,6 +118,8 @@ extern "C" {
 #define SL_NRESET_PIN                            9
 #define SL_NRESET_PORT                           gpioPortA
 
+#endif  //defined(brd4115a) || defined(brd4115b)
+
 #ifdef LR11XX_E707
 // GNSS LNA on PB05
 // GNSS LNA pin of Semtech's shield board is controlled by MCU GPIO
@@ -111,8 +138,6 @@ extern "C" {
 #define SL_LED_SNIFFING_PIN                      0
 #define SL_LED_SNIFFING_PORT                     gpioPortA
 #endif  //LR11XX_E707
-
-#endif  //defined(brd4115a) || defined(brd4115b)
 
 #define SL_SX_CS_PIN                             SL_SPIDRV_EXP_CS_PIN
 #define SL_SX_CS_PORT                            SL_SPIDRV_EXP_CS_PORT

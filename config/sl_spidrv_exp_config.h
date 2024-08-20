@@ -108,12 +108,12 @@
 #define SL_SPIDRV_EXP_CLK_PIN                    3
 #endif
 
-// USART0 CS on PC00
+// USART0 CS on PC06
 #ifndef SL_SPIDRV_EXP_CS_PORT                   
 #define SL_SPIDRV_EXP_CS_PORT                    gpioPortC
 #endif
 #ifndef SL_SPIDRV_EXP_CS_PIN                    
-#define SL_SPIDRV_EXP_CS_PIN                     0
+#define SL_SPIDRV_EXP_CS_PIN                     6
 #endif
 // [USART_SL_SPIDRV_EXP]$
 // <<< sl:end pin_tool >>>

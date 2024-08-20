@@ -16,7 +16,6 @@
 #include "sl_board_control.h"
 #include "sl_bt_rtos_adaptation.h"
 #include "sl_sleeptimer.h"
-#include "app_button_press.h"
 #include "app_log.h"
 #include "sl_debug_swo.h"
 #include "gpiointerrupt.h"
@@ -24,7 +23,6 @@
 #include "sl_iostream_stdlib_config.h"
 #include "sl_mbedtls.h"
 #include "nvm3_default.h"
-#include "sl_simple_button_instances.h"
 #include "sl_spidrv_instances.h"
 #include "ble_adapter.h"
 #include "sl_cli_instances.h"
@@ -66,7 +64,6 @@ void sl_driver_init(void)
 {
   sl_debug_swo_init();
   GPIOINT_Init();
-  sl_simple_button_init_instances();
   sl_spidrv_init_instances();
   sl_cos_send_config();
 }
@@ -93,7 +90,6 @@ void sl_stack_init(void)
 
 void sl_internal_app_init(void)
 {
-  app_button_press_init();
   app_log_init();
 }
 

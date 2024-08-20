@@ -122,7 +122,6 @@ extern "C" {
  ******************************************************************************/
 
 // Provide function declarations
-void button_press_from_cli(sl_cli_command_arg_t *arguments);
 void cli_send(sl_cli_command_arg_t *arguments);
 void cli_reset(sl_cli_command_arg_t *arguments);
 void cli_get_time(sl_cli_command_arg_t *arguments);
@@ -132,12 +131,6 @@ void cli_link_switch(sl_cli_command_arg_t *arguments);
 // Command structs. Names are in the format : cli_cmd_{command group name}_{command name}
 // In order to support hyphen in command and group name, every occurence of it while
 // building struct names will be replaced by "_hyphen_"
-static const sl_cli_command_info_t cli_cmd_button_press = \
-  SL_CLI_COMMAND(button_press_from_cli,
-                 "Emulating a button press",
-                  "Button: 0: BTN0, 1+: BTN1" SL_CLI_UNIT_SEPARATOR "Press and hold duration: 0 - short, 1- medium, 2 - long, 3+ - verylong" SL_CLI_UNIT_SEPARATOR,
-                 {SL_CLI_ARG_UINT8, SL_CLI_ARG_UINT8, SL_CLI_ARG_END, });
-
 static const sl_cli_command_info_t cli_cmd__send = \
   SL_CLI_COMMAND(cli_send,
                  "Updates counter value and sends it to the cloud",
@@ -172,14 +165,6 @@ static const sl_cli_command_info_t cli_cmd__switch_link = \
 // Create group command tables and structs if cli_groups given
 // in template. Group name is suffixed with _group_table for tables
 // and group commands are cli_cmd_grp_( group name )
-static const sl_cli_command_entry_t button_group_table[] = {
-  { "press", &cli_cmd_button_press, false },
-  { "p", &cli_cmd_button_press, true },
-  { NULL, NULL, false },
-};
-static const sl_cli_command_info_t cli_cmd_grp_button = \
-  SL_CLI_COMMAND_GROUP(button_group_table, "Emulating button events (various type of button presses).");
-
 // Create root command table
 const sl_cli_command_entry_t sl_cli_default_command_table[] = {
   { "send", &cli_cmd__send, false },
@@ -187,9 +172,6 @@ const sl_cli_command_entry_t sl_cli_default_command_table[] = {
   { "get_time", &cli_cmd__get_time, false },
   { "get_mtu", &cli_cmd__get_mtu, false },
   { "switch_link", &cli_cmd__switch_link, false },
-  { "button", &cli_cmd_grp_button, false },
-  { "btn", &cli_cmd_grp_button, true },
-  { "b", &cli_cmd_grp_button, true },
   { NULL, NULL, false },
 };
 

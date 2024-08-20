@@ -90,7 +90,9 @@ void app_init(void)
   sl_system_init();
 
   // Enable button press
+#if !defined(MURATA_MODULE)
   app_button_press_enable();
+#endif
 
   app_log_info("app: app started");
 

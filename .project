@@ -719,26 +719,6 @@
 			<locationURI>STUDIO_SDK_LOC/platform/common/toolchain/src/sl_memory.c</locationURI>
 		</link>
 		<link>
-			<name>gecko_sdk_4.4.3/platform/driver/button/inc/sl_button.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/driver/button/inc/sl_button.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.4.3/platform/driver/button/inc/sl_simple_button.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/driver/button/inc/sl_simple_button.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.4.3/platform/driver/button/src/sl_button.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/driver/button/src/sl_button.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.4.3/platform/driver/button/src/sl_simple_button.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/driver/button/src/sl_simple_button.c</locationURI>
-		</link>
-		<link>
 			<name>gecko_sdk_4.4.3/platform/driver/debug/inc/sl_debug_swo.h</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/driver/debug/inc/sl_debug_swo.h</locationURI>
@@ -3087,16 +3067,6 @@
 			<name>gecko_sdk_4.4.3/util/third_party/freertos/kernel/portable/SiliconLabs/tick_power_manager.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/util/third_party/freertos/kernel/portable/SiliconLabs/tick_power_manager.c</locationURI>
-		</link>
-		<link>
-			<name>sidewalk_2.0.1/component/overridden_gsdk_components/app/common/util/app_button_press/app_button_press.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/extension/amazon-sidewalk/component/overridden_gsdk_components/app/common/util/app_button_press/app_button_press.c</locationURI>
-		</link>
-		<link>
-			<name>sidewalk_2.0.1/component/overridden_gsdk_components/app/common/util/app_button_press/app_button_press.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/extension/amazon-sidewalk/component/overridden_gsdk_components/app/common/util/app_button_press/app_button_press.h</locationURI>
 		</link>
 		<link>
 			<name>sidewalk_2.0.1/component/overridden_gsdk_components/app/common/util/app_log/app_log.c</name>

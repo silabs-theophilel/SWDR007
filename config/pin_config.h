@@ -118,12 +118,12 @@
 #define USART0_CLK_PIN                           3
 #endif
 
-// USART0 CS on PC00
+// USART0 CS on PC06
 #ifndef USART0_CS_PORT                          
 #define USART0_CS_PORT                           gpioPortC
 #endif
 #ifndef USART0_CS_PIN                           
-#define USART0_CS_PIN                            0
+#define USART0_CS_PIN                            6
 #endif
 
 // USART0 RX on PC02
